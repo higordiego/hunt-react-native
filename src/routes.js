@@ -1,17 +1,22 @@
-import { createStackNavigator } from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 import Main from './pages/main';
 import Product from './pages/product';
 
-export default createStackNavigator({
+const App = createStackNavigator(
+  {
     Main,
     Product,
-}, {
-    navigationOptions: {
-        headerStyle: {
-            backgroundColor: '#DA552F',
-        },
-        headerTintColor: "#FFF",
-    }
-},
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#DA552F',
+      },
+      headerTintColor: '#FFF',
+    },
+  },
 );
+
+export default createAppContainer(App);

@@ -1,12 +1,9 @@
 import React from 'react';
 import Routes from './routes';
+import {useScreens} from 'react-native-screens';
 
-// import { WebView } from 'react-native-webview';
+useScreens();
 
 const App = () => <Routes />;
-// const App = () => <WebView source={{ uri: 'https://entrega.centromedicocory.com.br/entrega/login' }} />
 
 export default App;
-
-
-// `https://rocketseat-node.herokuapp.com/api/products`
